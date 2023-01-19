@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Trade</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../bootstrap-5.2.2-dist/css/bootstrap.min.css'>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    
+    
+</head>
+<body>
+    <div class="container">
+        <ul class="nav justify-content-center mt-5 p-3">
+            <li class="nav-item">
+            <p class="text-dark">TRADE FIFA 23</p>
+            </li>
+        </ul>
+
+        <!--Dica trade-->
+        <div class="card-group mt-5">
+            <div class="card p-2 m-4 border border-dark rounded">
+              <img src="../img/coins.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-center">Trade Massivo</h5>
+                <p class="card-text text-center">Trade de cartas ouro não raro. Trade massivo, retorno esperado de 250,00 coins por carta vendida.</p>
+                <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+              </div>
+            </div>
+
+            <div class="card p-2 m-4 border border-dark rounded">
+              <img src="../img/trade.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-center">Trade melhoria de jogador</h5>
+                <p class="card-text text-center">Trade de cartas overall 85 e 86. Trade de jogador, retorno esperado de 1.200,00 coins por carta vendida</p>
+                <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+              </div>
+            </div>
+          </div>
+
+        <!--Calculado trade-->
+        <div class="p-4 d-flex justify-content-center">
+            <div class="border border-dark p-3 rounded" style="display: inline-block;">
+                    <h3>Calculadora trade </h3>
+                  <form class="form" id="forms">
+                    <input type="text" class="form-control" placeholder="Lucro" disabled id="lucro">
+                    <hr>
+                    <div class="row g-2">
+                        <div class="col-md">
+                          <div class="form-floating">
+                            <input type="number" class="form-control" id="qtd" placeholder="Qtd Jogador">
+                            <label for="floatingInputGrid">Qtd Jogador</label>
+                          </div>
+                        </div>
+
+                        <div class="col-md">
+                            <div class="form-floating">
+                              <input type="number" class="form-control" id="compra" placeholder="Valor compra">
+                              <label for="floatingInputGrid">Valor compra</label>
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="form-floating">
+                              <input type="number" class="form-control" id="venda" placeholder="valor venda">
+                              <label for="floatingInputGrid">valor venda</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-block mt-2 float-md-end">
+                      <button class="btn btn-outline-primary m-1" id="calcular">Calcular</button>
+                    </div>
+                    <ul id="erro">
+                      <li class="invisivel" id="ret">Por favor, preencha todos os campos</li>
+                    </ul>
+                  </form>
+            </div>
+        </div>
+
+        <h1>ÚLTIMOS TRADES:</h1>
+        <table class="table table-sm" id="carrega-trades">
+          <tbody>
+            <tr>
+              <th scope="col">Qtd jogador</th>
+              <th scope="col">Compra</th>
+              <th scope="col">Venda</th>
+              <th scope="col">Investimento</th>
+              <th scope="col">Retorno</th>
+            </tr>
+            <tbody>
+        </table>
+        
+
+        <!--Dicas de trade - Datas-->
+        <div class="">
+          <h1>TRADE MASSIVO</h1>
+          <hr>
+
+          <p>No trade massivo o alvo são cartas ouro comum, visando os grandes confrontos que sempre são disponibilizados na Quinta feira.</p>
+          <p>Para esse trade as ligas utilizadas sempre são as cinco principais ligas do mundo, sendo essas:</p>
+
+          <ul>
+            <li>Premiere Ligue</li>
+            <li>La Liga</li>
+            <li>Série A Tim</li>
+            <li>Bundesligue</li>
+            <li>Ligue 1</li>
+          </ul>
+
+          <h3>Filtro:</h3>
+          <hr>
+          <p>O filtro utilizado depende da liga que for usada para o trade, exemplo:</p>
+          <p>Para jogadores da Premiere Ligue, devemos sempre usar a nacionalidade inglesa. Essa lógica se aplica para as outras ligas.</p>
+
+          <ul>
+            <li>Premiere Ligue - Jogadores ingleses</li>
+            <li>La Liga - Jogadores espanhois</li>
+            <li>Série A Tim - Jogadores italianos</li>
+            <li>Bundesligue - Jogadores alemães</li>
+            <li>Ligue 1 - Jogadres franceses</li>
+          </ul>
+
+          <p>A utilização desse método se baseia em duas posições, zagueiro e mei. Essas duas posições garante venda      rápida a partir do momento que existem Dmes disponivies.</p>
+          <p>Exemplo consulta trade:</p>
+          <img src="../img/consulta.jpeg" alt="" title="Consulta França" class="mb-5 img-fluid">
+
+          <h3>Compra e venda:</h3>
+          <hr>
+
+          <h5>Compra:</h5>
+          <p>A compra de jogadores utilizando o filtro informado, deverá ser realizada entre 350 ou 400 coins.</p>
+
+          <h5>Venda:</h5>
+          <p>A venda de jogadores utilizando o filtro informada, deverá ser realizada no valor de 700 coins </p>
+
+          <h5>Quando comprar?</h5>
+          <p>A compra das cartas com menor valor deve sempre acontecer nos dias de premiação. Domingo a tarde e quarta de manhã.</p>
+          
+          <h5>Retorno:</h5>
+          <p>O retorno estipulado é de 265 coins por carta vendida. Utilize a calculadora de trade para calcular o seu lucro.</p>
+
+          <h1>TRADE MELHORIA DE JOGADOR</h1>
+          <hr>
+          <p>No trade melhoria de jogador o alvo são cartas de overall 85 e 86. Carta com esses overall comumente baixam de valor em dias de premiação ou em semanas que não existem Dmes ativos.</p>
+          
+          <h3>Compra e venda:</h3>
+          <hr>
+
+          <h5>Compra:</h5>
+          <p>Para analisar quais jogadores comprar a utilização do site <a  class="link text-dark" href="https://www.futbin.com/" target="_blank">FUTIBIN</a> se faz necesário.</p>
+          
+          <table class="table">
+            <tr>
+              <th>Overall</th>
+              <th>Valor compra</th>
+            </tr>
+            <tr>
+              <td>85</td>
+              <td>Até 8.400,00</td>
+            </tr>
+            <tr>
+              <td>86</td>
+              <td>Até 14.00,00</td>
+            </tr>
+          </table>
+
+          <h5>Venda:</h5>
+          <p>A venda de jogadores utilizando o filtro informada, deverá ser visto conforme a tabela abaixo: </p>
+
+          <table class="table">
+            <tr>
+              <th>Overall</th>
+              <th>Valor venda</th>
+            </tr>
+            <tr>
+              <td>85</td>
+              <td>9.500,00</td>
+            </tr>
+            <tr>
+              <td>86</td>
+              <td>16.00,00</td>
+            </tr>
+          </table>
+
+          <h5>Quando comprar?</h5>
+          <p>A compra das cartas com menor valor deve sempre acontecer nos dias de premiação. Domingo a tarde e quarta de manhã.</p>
+          
+          <h5>Retorno:</h5>
+          <p>O retorno estipulado é de 625,00 coins para cartas de overall 85. Para cartas overall 86 o lucro é de 1.200,00 coins.</p>
+
+        </div>
+
+        <div>
+          <h3>Observações:</h3>
+          <hr>
+          <p>Para fontes alternativas de trade, buscar por canais de apoio no Youtube.</p>
+
+          <p>Canais para trade:</p>
+          <ul>
+            <li><a class="text-dark" target="_blank" href="https://www.youtube.com/c/Irlandolinker">Linker</a></li>
+            <li><a class="text-dark" target="_blank" href="https://www.youtube.com/c/FIFATRADECHANNELOficial">FIFA Trade Channel</a></li>
+            <li><a class="text-dark" target="_blank" href="https://www.youtube.com/c/Milion%C3%A1riodoUT">Milionário do UT</a></li>
+          </ul>
+        </div>
+        
+        <div class="float-end">
+          <p class="dev">By: Caio Cerqueira Ferreira de Souza</p>
+        </div>
+    </div>
+    <script src="../bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
+    <script src="../Js/jquery.js"></script>
+    <script src='../Js/javascript.js'></script>
+    <script src='../Js/bootstrap.js'></script>
+    <script src="../Js/calcula-trade.js"></script>
+    <script src="../Js/ultimos-trades.js"></script>
+    <script src="../Js/mensagem-erro.js"></script>
+    <script src="../Js/localStorage.js"></script>
+    <script src="../Js/removeElemento.js"></script>
+</body>
+</html>
